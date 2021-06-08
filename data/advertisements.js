@@ -26,12 +26,10 @@ export const advertisements = {
   last: [
     {
       id: 44504,
-      url: 'https://google.com',
       imageURL: 'https://dummyimage.com/640x100.png',
     },
     {
       id: 11005,
-      url: 'https://google.com',
       imageURL: 'https://dummyimage.com/640x100.png',
     },
   ],
@@ -44,13 +42,11 @@ export const advertisements = {
     },
     {
       id: 11005,
-      url: 'https://google.com',
       imageURL:
         'https://www.positivelyaware.com/sites/default/files/article-images/heart-disease-icon-200x200px.jpg',
     },
     {
       id: 11005,
-      url: 'https://google.com',
       imageURL:
         'https://www.proyectosparaconstruir.com/wp-content/uploads/2017/04/300x600.jpg',
     },

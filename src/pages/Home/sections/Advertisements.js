@@ -4,6 +4,7 @@ const Advertisements = ({data = []}) => (
   <SimpleGrid columns={2} spacing={4}>
     {data.map((item, index) => (
       <Image
+        onClick={() => item.url && window.open(item.url, '_blank')}
         key={index}
         loading="lazy"
         src={item.imageURL}
