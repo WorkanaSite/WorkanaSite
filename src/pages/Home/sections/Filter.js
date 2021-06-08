@@ -2,15 +2,13 @@ import {
   Flex,
   Select,
   Stack,
-  Badge,
   HStack,
   Tag,
   TagLabel,
   TagRightIcon,
   Container,
 } from '@chakra-ui/react';
-import {AiOutlineWoman, AiOutlineMan} from 'react-icons/ai';
-import {FaTransgenderAlt} from 'react-icons/fa';
+import {gendersOptions} from 'src/components/GenderIcons';
 import {MAX_WIDHT} from 'src/constants';
 
 const CustomTag = ({
@@ -44,6 +42,7 @@ const Filter = ({
   gender,
 }) => (
   <Flex
+    zIndex="banner"
     flexWrap="wrap"
     position="sticky"
     top="65px"
@@ -54,30 +53,17 @@ const Filter = ({
     as={Container}
     py="2">
     <Stack direction="row" mb="2">
-      <CustomTag
-        label="Mujeres"
-        value="Mujer"
-        Icon={AiOutlineWoman}
-        colorScheme="red"
-        isSelected={gender === 'Mujer'}
-        handleSelect={handleSelectGender}
-      />
-      <CustomTag
-        label="Hombres"
-        value="Hombre"
-        Icon={AiOutlineMan}
-        colorScheme="blue"
-        isSelected={gender === 'Hombre'}
-        handleSelect={handleSelectGender}
-      />
-      <CustomTag
-        label="Trans"
-        value="Trans"
-        Icon={FaTransgenderAlt}
-        colorScheme="purple"
-        isSelected={gender === 'Trans'}
-        handleSelect={handleSelectGender}
-      />
+      {Object.values(gendersOptions).map(({label, value, Icon}, index) => (
+        <CustomTag
+          key={index}
+          label={label}
+          value={value}
+          Icon={Icon}
+          colorScheme="red"
+          isSelected={gender === value}
+          handleSelect={handleSelectGender}
+        />
+      ))}
     </Stack>
     <Stack direction="row" mb="2" flexWrap="wrap">
       <Select
