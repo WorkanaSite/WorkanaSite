@@ -3,6 +3,8 @@ import Top from './sections/Top';
 import AllModels from './sections/AllModels';
 import Filter from './sections/Filter';
 import {useEffect, useState} from 'react';
+import {filterByGenderZoneAndAgency} from './lib';
+import {useRouter} from 'next/router';
 const Home = ({
   zones,
   agencies,
@@ -10,10 +12,12 @@ const Home = ({
   top: topModels,
   advertisements = {},
 }) => {
+  const router = useRouter();
+  const {query = {}} = router;
   const [{gender, zone, agency}, setFilter] = useState({
-    gender: '',
-    zone: '',
-    agency: '',
+    gender: query?.gender || 'Mujer',
+    zone: query?.zone || '',
+    agency: query?.agency || '',
   });
   const [filteredModels, setFilterModels] = useState([]);
   const {top, medium, last} = advertisements;
@@ -28,15 +32,29 @@ const Home = ({
 
   useEffect(() => {
     setFilterModels(
-      models.filter(item => item.agencyId == agency || item.zoneId == zone),
+      filterByGenderZoneAndAgency({zone, gender, agency, models}),
     );
-  }, [zone, agency]);
+    router.push(
+      {
+        path: '/',
+        query: {
+          genero: gender,
+          zona: zone,
+          agencia: agency,
+        },
+      },
+      `/?genero=${gender}${zone && `&zona=${zone}`}${
+        agency && `&agencia=${agency}`
+      }`,
+      {shallow: true},
+    );
+  }, [zone, agency, gender]);
 
   const onSelectGender = label => setFilter(prev => ({...prev, gender: label}));
   const onSelectZone = id => setFilter(prev => ({...prev, zone: id}));
   const onSelectAgency = id => setFilter(prev => ({...prev, agency: id}));
 
-  const isSearch = gender || zone || agency;
+  const isSearch = zone || agency;
   return (
     <>
       <Top models={topModels} />

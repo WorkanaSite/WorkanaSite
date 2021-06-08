@@ -28,7 +28,7 @@ const Navigation = () => {
   const {isOpen, onToggle} = useDisclosure();
 
   return (
-    <Box position="sticky" top={0}>
+    <Box position="sticky" top={0} zIndex="modal">
       <Flex
         minH={'60px'}
         py={{base: 2}}

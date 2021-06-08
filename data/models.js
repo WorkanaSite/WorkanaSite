@@ -6,6 +6,7 @@ export const models = [
   {
     id: 7590,
     name: 'Manuel Williamson',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -65,6 +66,7 @@ export const models = [
   {
     id: 80764,
     name: 'Miss Marguerite Armstrong',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -119,6 +121,7 @@ export const models = [
   {
     id: 2562,
     name: 'Darin Muller',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'matrices',
@@ -169,6 +172,7 @@ export const models = [
   {
     id: 5071,
     name: 'Shannon Sipes',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'morph',
@@ -224,6 +228,7 @@ export const models = [
   {
     id: 45029,
     name: 'Billy Murphy',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'alarm',
@@ -262,6 +267,7 @@ export const models = [
   {
     id: 65394,
     name: 'Beverly Jenkins',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'compressing',
@@ -297,6 +303,7 @@ export const models = [
   {
     id: 72505,
     name: 'Vincent Borer',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Tools',
@@ -327,6 +334,7 @@ export const models = [
   {
     id: 46551,
     name: 'Margaret Kohler',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -385,6 +393,7 @@ export const models = [
   {
     id: 56385,
     name: 'Dr. Allan VonRueden',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -439,6 +448,7 @@ export const models = [
   {
     id: 18452,
     name: 'Lamar Lubowitz',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'matrices',
@@ -489,6 +499,7 @@ export const models = [
   {
     id: 70487,
     name: 'Wanda Bauch',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'morph',
@@ -544,6 +555,7 @@ export const models = [
   {
     id: 23981,
     name: 'Sophie Predovic MD',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'alarm',
@@ -582,6 +594,7 @@ export const models = [
   {
     id: 25425,
     name: 'Bernard OReilly',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'compressing',
@@ -617,6 +630,7 @@ export const models = [
   {
     id: 93023,
     name: 'Brandon Hahn',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Tools',
@@ -647,6 +661,7 @@ export const models = [
   {
     id: 74159,
     name: 'Candice Pouros',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -705,6 +720,7 @@ export const models = [
   {
     id: 13726,
     name: 'Stacy Gibson',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -759,6 +775,7 @@ export const models = [
   {
     id: 37789,
     name: 'Felix Kling',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'matrices',
@@ -809,6 +826,7 @@ export const models = [
   {
     id: 72536,
     name: 'Mindy Johnson',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'morph',
@@ -864,6 +882,7 @@ export const models = [
   {
     id: 23528,
     name: 'Sandra Kunde',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'alarm',
@@ -902,6 +921,7 @@ export const models = [
   {
     id: 71230,
     name: 'Alicia Effertz',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'compressing',
@@ -937,6 +957,7 @@ export const models = [
   {
     id: 8394,
     name: 'Carlton Cole',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Tools',
@@ -967,6 +988,7 @@ export const models = [
   {
     id: 88498,
     name: 'Delores Bogan',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -1025,6 +1047,7 @@ export const models = [
   {
     id: 71410,
     name: 'Mrs. Ken Skiles',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -1079,6 +1102,7 @@ export const models = [
   {
     id: 751,
     name: 'Mr. Kristi Douglas',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'matrices',
@@ -1129,6 +1153,7 @@ export const models = [
   {
     id: 8357,
     name: 'Nelson Renner',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'morph',
@@ -1184,6 +1209,7 @@ export const models = [
   {
     id: 20519,
     name: 'Lynne Tromp',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'alarm',
@@ -1222,6 +1248,7 @@ export const models = [
   {
     id: 86424,
     name: 'Tina Russel V',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'compressing',
@@ -1257,6 +1284,7 @@ export const models = [
   {
     id: 94626,
     name: 'Tina Blanda',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Tools',

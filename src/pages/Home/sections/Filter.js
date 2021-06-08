@@ -13,11 +13,18 @@ import {AiOutlineWoman, AiOutlineMan} from 'react-icons/ai';
 import {FaTransgenderAlt} from 'react-icons/fa';
 import {MAX_WIDHT} from 'src/constants';
 
-const CustomTag = ({Icon, colorScheme, label, handleSelect, isSelected}) => {
+const CustomTag = ({
+  Icon,
+  colorScheme,
+  label,
+  value,
+  handleSelect,
+  isSelected,
+}) => {
   return (
     <HStack spacing={4}>
       <Tag
-        onClick={() => handleSelect(label)}
+        onClick={() => handleSelect(value)}
         variant="solid"
         colorScheme={isSelected ? colorScheme : 'gray'}>
         <TagLabel>{label}</TagLabel>
@@ -49,20 +56,23 @@ const Filter = ({
     <Stack direction="row" mb="2">
       <CustomTag
         label="Mujeres"
+        value="Mujer"
         Icon={AiOutlineWoman}
         colorScheme="red"
-        isSelected={gender === 'Mujeres'}
+        isSelected={gender === 'Mujer'}
         handleSelect={handleSelectGender}
       />
       <CustomTag
         label="Hombres"
+        value="Hombre"
         Icon={AiOutlineMan}
         colorScheme="blue"
-        isSelected={gender === 'Hombres'}
+        isSelected={gender === 'Hombre'}
         handleSelect={handleSelectGender}
       />
       <CustomTag
         label="Trans"
+        value="Trans"
         Icon={FaTransgenderAlt}
         colorScheme="purple"
         isSelected={gender === 'Trans'}

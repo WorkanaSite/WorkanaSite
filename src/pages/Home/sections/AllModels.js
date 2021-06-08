@@ -15,7 +15,7 @@ import {WarningIcon} from '@chakra-ui/icons';
 const CustomGrid = ({models, advertisement}) => {
   return (
     <>
-      <SimpleGrid columns={{base: 4, lg: 6}} spacing={4}>
+      <SimpleGrid columns={{base: 2, sm: 3, md: 4, lg: 6}} spacing={4}>
         {models.map(item => (
           <NextLink key={item.id} href={`/modelos/${item.id}`}>
             <Image

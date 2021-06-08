@@ -6,6 +6,7 @@ export const top = [
   {
     id: 7590,
     name: 'Manuel Williamson',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -65,6 +66,7 @@ export const top = [
   {
     id: 80764,
     name: 'Miss Marguerite Armstrong',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -119,6 +121,7 @@ export const top = [
   {
     id: 2562,
     name: 'Darin Muller',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'matrices',
@@ -169,6 +172,7 @@ export const top = [
   {
     id: 5071,
     name: 'Shannon Sipes',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'morph',
@@ -224,6 +228,7 @@ export const top = [
   {
     id: 45029,
     name: 'Billy Murphy',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'alarm',
@@ -262,6 +267,7 @@ export const top = [
   {
     id: 65394,
     name: 'Beverly Jenkins',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'compressing',
@@ -297,6 +303,7 @@ export const top = [
   {
     id: 72505,
     name: 'Vincent Borer',
+    gender: 'Hombre',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Tools',
@@ -327,6 +334,7 @@ export const top = [
   {
     id: 46551,
     name: 'Margaret Kohler',
+    gender: 'Mujer',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -385,6 +393,7 @@ export const top = [
   {
     id: 56385,
     name: 'Dr. Allan VonRueden',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -439,6 +448,7 @@ export const top = [
   {
     id: 18452,
     name: 'Lamar Lubowitz',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'matrices',
