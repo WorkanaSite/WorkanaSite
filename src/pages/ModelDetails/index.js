@@ -44,7 +44,7 @@ const ModelDetails = ({
         <Heading mb="4">{`Modelo`}</Heading>
         <Grid
           gridTemplateColumns="repeat(6, 1fr)"
-          gridTemplateRows={{base: '1fr 1fr', md: '1fr'}}>
+          gridTemplateRows={{md: '1fr'}}>
           <GridItem colSpan={{base: 6, md: 4}} maxWidth="600px" marginX="auto">
             <Grid
               gridTemplateColumns="repeat(2, 1fr)"
@@ -68,6 +68,7 @@ const ModelDetails = ({
             as={Flex}
             px="2"
             pb="2"
+            pt={{base: '4', lg: '0'}}
             flexDirection="column"
             alignItems="center">
             <Heading textAlign="center">
@@ -84,7 +85,12 @@ const ModelDetails = ({
             <Text textAlign="center" fontSize="lg">
               {description}
             </Text>
-            <Box justifyItems="flex-start" width="100%" mt="8">
+            <Box
+              justifyItems="flex-start"
+              width="100%"
+              mt="8"
+              position="sticky"
+              top={'72px'}>
               <InfoModel
                 title="Detalles"
                 value={name}
