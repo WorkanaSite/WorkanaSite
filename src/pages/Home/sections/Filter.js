@@ -1,19 +1,77 @@
-import {Flex, Select} from '@chakra-ui/react';
+import {
+  Flex,
+  Select,
+  Stack,
+  Badge,
+  HStack,
+  Tag,
+  TagLabel,
+  TagRightIcon,
+} from '@chakra-ui/react';
+import {AiOutlineWoman, AiOutlineMan} from 'react-icons/ai';
+import {FaTransgenderAlt} from 'react-icons/fa';
 
-const Filter = ({zoneOptions = [], agenciesOptions = []}) => (
+const CustomTag = ({Icon, colorScheme, label, handleSelect, isSelected}) => {
+  return (
+    <HStack spacing={4}>
+      <Tag
+        onClick={() => handleSelect(label)}
+        variant="solid"
+        colorScheme={isSelected ? colorScheme : 'gray'}>
+        <TagLabel>{label}</TagLabel>
+        <TagRightIcon as={Icon} />
+      </Tag>
+    </HStack>
+  );
+};
+const Filter = ({
+  zoneOptions = [],
+  agenciesOptions = [],
+  handleSelectGender,
+  handleSelectZone,
+  handleSelectAgency,
+  zone,
+  agency,
+  gender,
+}) => (
   <Flex
     flexWrap="wrap"
     position="sticky"
     top="65px"
-    justifyContent="center"
+    justifyContent="flex-end"
     alignItems="center"
     bg="white"
     py="2">
+    <Stack direction="row">
+      <CustomTag
+        label="Mujeres"
+        Icon={AiOutlineWoman}
+        colorScheme="red"
+        isSelected={gender === 'Mujeres'}
+        handleSelect={handleSelectGender}
+      />
+      <CustomTag
+        label="Hombres"
+        Icon={AiOutlineMan}
+        colorScheme="blue"
+        isSelected={gender === 'Hombres'}
+        handleSelect={handleSelectGender}
+      />
+      <CustomTag
+        label="Trans"
+        Icon={FaTransgenderAlt}
+        colorScheme="purple"
+        isSelected={gender === 'Trans'}
+        handleSelect={handleSelectGender}
+      />
+    </Stack>
     <Select
       placeholder="Zona"
       width="44"
       mx="2"
       variant="outline"
+      value={zone}
+      onChange={({target}) => handleSelectZone(target.value)}
       borderColor="tomato"
       color="tomato">
       {zoneOptions.map(item => (
@@ -26,6 +84,8 @@ const Filter = ({zoneOptions = [], agenciesOptions = []}) => (
       placeholder="Agencia"
       width="44"
       mx="2"
+      value={agency}
+      onChange={({target}) => handleSelectAgency(target.value)}
       borderColor="blue.400"
       color="blue.400">
       {agenciesOptions.map(item => (
