@@ -1,5 +1,6 @@
 import {getDataFromServer} from 'services';
-const Page = props => <h1>Hola contacto</h1>;
+import Contact from 'src/pages/Contact';
+const Page = props => <Contact />;
 
 // export const getServerSideProps = async ({res}) => {
 //   const data = await getDataFromServer({path: 'data-site', res});

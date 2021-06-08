@@ -8,7 +8,6 @@ const ModelCard = ({
   src,
   alt,
   position = 'relative',
-  heigthImage,
   gender,
   indepent,
   ...props
@@ -23,7 +22,7 @@ const ModelCard = ({
       alt={alt}
       objectFit="contain"
       loading="lazy"
-      height={heigthImage}
+      minH="200px"
       {...props}
     />
   );

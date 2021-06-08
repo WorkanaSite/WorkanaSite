@@ -20,7 +20,7 @@ const Home = ({
     agency: query?.agency || '',
   });
   const [filteredModels, setFilterModels] = useState([]);
-  const {top, medium, last} = advertisements;
+  const {top = [], medium = [], last = [], right = []} = advertisements;
   const agenciesOptions = agencies.map(item => ({
     value: item.id,
     label: item.name,
@@ -75,6 +75,7 @@ const Home = ({
         top={top}
         medium={medium}
         last={last}
+        right={right}
         isSearch={isSearch}
       />
     </>

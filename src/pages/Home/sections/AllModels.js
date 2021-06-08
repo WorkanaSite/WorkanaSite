@@ -10,6 +10,7 @@ import {
 import {MAX_WIDHT} from 'src/constants';
 import {WarningIcon} from '@chakra-ui/icons';
 import ModelCard from 'src/components/ModelCard';
+import VerticaAdvertisements from './VerticalAdvertisements';
 
 const CustomGrid = ({models, advertisement}) => {
   return (
@@ -28,7 +29,7 @@ const CustomGrid = ({models, advertisement}) => {
             indepent={item.indepent}
             objectFit="contain"
             loading="lazy"
-            width="90"
+            width="100%"
             heigth="100%"
           />
         ))}
@@ -38,7 +39,15 @@ const CustomGrid = ({models, advertisement}) => {
   );
 };
 
-const AllModels = ({models, top, medium, last, filteredModels, isSearch}) => {
+const AllModels = ({
+  models,
+  top,
+  medium,
+  last,
+  filteredModels,
+  isSearch,
+  right,
+}) => {
   const steps = 12;
   const existFilteredData = filteredModels.length;
   const data = existFilteredData ? filteredModels : models;
@@ -70,11 +79,13 @@ const AllModels = ({models, top, medium, last, filteredModels, isSearch}) => {
           />
           <CustomGrid models={data.slice(steps * 2 + 2)} advertisement={last} />
         </GridItem>
-        <GridItem colSpan={{base: 0, lg: 1}} bg="tomato" />
+        <GridItem colSpan={{base: 0, lg: 1}}>
+          {/* {right.map((item, index) => (
+            <Image key={index} src={item.imageURL} width="100%" />
+          ))} */}
+          <VerticaAdvertisements data={right} />
+        </GridItem>
       </Grid>
-      <Text textAlign="justify" my="5">
-        {process.env.NEXT_PUBLIC_TERMS}
-      </Text>
     </Container>
   );
 };
