@@ -56,7 +56,7 @@ const Navigation = () => {
           alignitems="center">
           <NextLink href="/">
             <Image
-              align={useBreakpointValue({base: 'center', md: 'left'})}
+              align={useBreakpointValue({base: 'center'})}
               src="/logo.png"
               alt="site logo"
               height={12}
@@ -67,8 +67,8 @@ const Navigation = () => {
             <DesktopNav />
           </Flex>
         </Flex>
-
-        <Stack
+        <Stack flex={{base: 1, md: 0}} justify={'flex-end'} direction={'row'} />
+        {/* <Stack
           flex={{base: 1, md: 0}}
           justify={'flex-end'}
           direction={'row'}
@@ -86,6 +86,7 @@ const Navigation = () => {
             Publica tu anuncio
           </Button>
         </Stack>
+       */}
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -104,6 +105,8 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
+                as={navItem.isNextLink && NextLink}
+                target={navItem.isNextLink ? '' : '_blank'}
                 href={navItem.href ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
