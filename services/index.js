@@ -9,5 +9,6 @@ export const getDataFromServer = async ({path, res}) => {
     res.writeHead(302, {
       Location: '/404',
     });
+    res.end();
   }
 };
