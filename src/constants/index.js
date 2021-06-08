@@ -1,1 +1,1 @@
-export const MAX_WIDHT = '1440px';
+export const MAX_WIDHT = '1280px';

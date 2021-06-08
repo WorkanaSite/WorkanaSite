@@ -1,9 +1,9 @@
 export const zones = [
-  {id: 101, name: 'Portoviejo'},
-  {id: 102, name: 'Quito'},
-  {id: 103, name: 'Guayaquil'},
-  {id: 104, name: 'Pelileo'},
-  {id: 105, name: 'Sucumbios'},
-  {id: 106, name: 'Tulcan'},
-  {id: 107, name: 'Bogotá'},
+  {id: 201, name: 'Portoviejo'},
+  {id: 202, name: 'Quito'},
+  {id: 203, name: 'Guayaquil'},
+  {id: 204, name: 'Pelileo'},
+  {id: 205, name: 'Sucumbios'},
+  {id: 206, name: 'Tulcan'},
+  {id: 207, name: 'Bogotá'},
 ];

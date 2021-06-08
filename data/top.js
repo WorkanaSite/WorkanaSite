@@ -14,9 +14,9 @@ export const top = [
     agencyId: 101,
     zoneId: 204,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Laudantium voluptatibus dolores. Rem nostrum maxime asperiores quae dignissimos eligendi doloribus. Nihil modi distinctio consequatur amet et praesentium quidem est quia. Ratione sed aliquam. Molestiae officia neque necessitatibus.',
@@ -48,9 +48,9 @@ export const top = [
     agencyId: 101,
     zoneId: 205,
     interests: ['Juegos de mesa'],
-    category: ['T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Nobis dolores nobis facere modi quia. Id sunt ut et velit sit maiores voluptas. Provident consequatur iste repudiandae et sint. Vero molestiae et et atque. Aliquam eum commodi fugit id amet sunt qui.',
@@ -80,9 +80,9 @@ export const top = [
     agencyId: 107,
     zoneId: 206,
     interests: ['Juegos de mesa'],
-    category: ['M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Sed deleniti et nisi earum expedita explicabo magni delectus. Sapiente odio ullam aut vitae ea consequatur excepturi et. Eum blanditiis ut ut hic omnis fugit velit sed.',
@@ -108,9 +108,9 @@ export const top = [
     agencyId: 101,
     zoneId: 202,
     interests: ['Juegos de mesa'],
-    category: ['H', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Et voluptatem necessitatibus magnam omnis. Ratione quo voluptatem rerum reiciendis enim voluptatibus velit. Voluptas ut ut ullam est.',
@@ -158,9 +158,9 @@ export const top = [
     agencyId: 102,
     zoneId: 202,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Et vel magni expedita repellendus consequatur et. Facilis qui et occaecati aut eum voluptas tempora magnam. Et cum ea libero. Sit consequatur architecto velit repellat non.',
@@ -204,9 +204,9 @@ export const top = [
     agencyId: 103,
     zoneId: 203,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Eius repellat ab. Dolorum officia itaque. Vero aut repellat aut.',
@@ -247,9 +247,9 @@ export const top = [
     agencyId: 104,
     zoneId: 204,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Ut alias odio sed ut officiis qui quos voluptatem. Et earum atque consequatur aut ea minima adipisci corporis autem. Consectetur qui aut consequuntur exercitationem aut.',
@@ -294,9 +294,9 @@ export const top = [
     agencyId: 101,
     zoneId: 204,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Laudantium voluptatibus dolores. Rem nostrum maxime asperiores quae dignissimos eligendi doloribus. Nihil modi distinctio consequatur amet et praesentium quidem est quia. Ratione sed aliquam. Molestiae officia neque necessitatibus.',
@@ -328,9 +328,9 @@ export const top = [
     agencyId: 101,
     zoneId: 205,
     interests: ['Juegos de mesa'],
-    category: ['T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Nobis dolores nobis facere modi quia. Id sunt ut et velit sit maiores voluptas. Provident consequatur iste repudiandae et sint. Vero molestiae et et atque. Aliquam eum commodi fugit id amet sunt qui.',
@@ -360,9 +360,9 @@ export const top = [
     agencyId: 107,
     zoneId: 206,
     interests: ['Juegos de mesa'],
-    category: ['M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Sed deleniti et nisi earum expedita explicabo magni delectus. Sapiente odio ullam aut vitae ea consequatur excepturi et. Eum blanditiis ut ut hic omnis fugit velit sed.',
@@ -388,9 +388,9 @@ export const top = [
     agencyId: 101,
     zoneId: 202,
     interests: ['Juegos de mesa'],
-    category: ['H', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Et voluptatem necessitatibus magnam omnis. Ratione quo voluptatem rerum reiciendis enim voluptatibus velit. Voluptas ut ut ullam est.',
@@ -438,9 +438,9 @@ export const top = [
     agencyId: 102,
     zoneId: 202,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Et vel magni expedita repellendus consequatur et. Facilis qui et occaecati aut eum voluptas tempora magnam. Et cum ea libero. Sit consequatur architecto velit repellat non.',
@@ -484,9 +484,9 @@ export const top = [
     agencyId: 103,
     zoneId: 203,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Eius repellat ab. Dolorum officia itaque. Vero aut repellat aut.',
@@ -527,9 +527,9 @@ export const top = [
     agencyId: 104,
     zoneId: 204,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Ut alias odio sed ut officiis qui quos voluptatem. Et earum atque consequatur aut ea minima adipisci corporis autem. Consectetur qui aut consequuntur exercitationem aut.',
@@ -574,9 +574,9 @@ export const top = [
     agencyId: 101,
     zoneId: 204,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Laudantium voluptatibus dolores. Rem nostrum maxime asperiores quae dignissimos eligendi doloribus. Nihil modi distinctio consequatur amet et praesentium quidem est quia. Ratione sed aliquam. Molestiae officia neque necessitatibus.',
@@ -608,9 +608,9 @@ export const top = [
     agencyId: 101,
     zoneId: 205,
     interests: ['Juegos de mesa'],
-    category: ['T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Nobis dolores nobis facere modi quia. Id sunt ut et velit sit maiores voluptas. Provident consequatur iste repudiandae et sint. Vero molestiae et et atque. Aliquam eum commodi fugit id amet sunt qui.',
@@ -640,9 +640,9 @@ export const top = [
     agencyId: 107,
     zoneId: 206,
     interests: ['Juegos de mesa'],
-    category: ['M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Sed deleniti et nisi earum expedita explicabo magni delectus. Sapiente odio ullam aut vitae ea consequatur excepturi et. Eum blanditiis ut ut hic omnis fugit velit sed.',
@@ -668,9 +668,9 @@ export const top = [
     agencyId: 101,
     zoneId: 202,
     interests: ['Juegos de mesa'],
-    category: ['H', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Et voluptatem necessitatibus magnam omnis. Ratione quo voluptatem rerum reiciendis enim voluptatibus velit. Voluptas ut ut ullam est.',
@@ -718,9 +718,9 @@ export const top = [
     agencyId: 102,
     zoneId: 202,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Et vel magni expedita repellendus consequatur et. Facilis qui et occaecati aut eum voluptas tempora magnam. Et cum ea libero. Sit consequatur architecto velit repellat non.',
@@ -764,9 +764,9 @@ export const top = [
     agencyId: 103,
     zoneId: 203,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Eius repellat ab. Dolorum officia itaque. Vero aut repellat aut.',
@@ -807,9 +807,9 @@ export const top = [
     agencyId: 104,
     zoneId: 204,
     interests: ['Juegos de mesa'],
-    category: ['H', 'M', 'T'],
-    schedule: '9:00 - 11:00',
-    days: 'Lunes - Viernes',
+    category: ['Hombres', 'Mujeres', 'Trans'],
+    schedule: 'Lunes - Viernes de 9:00 - 11:00',
+
     phone: '593876543212',
     description:
       'Ut alias odio sed ut officiis qui quos voluptatem. Et earum atque consequatur aut ea minima adipisci corporis autem. Consectetur qui aut consequuntur exercitationem aut.',
