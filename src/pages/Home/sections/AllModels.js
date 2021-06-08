@@ -6,9 +6,11 @@ import {
   SimpleGrid,
   Container,
   Text,
+  Alert,
 } from '@chakra-ui/react';
 import {MAX_WIDHT} from 'src/constants';
 import NextLink from 'src/components/NextLink';
+import {WarningIcon} from '@chakra-ui/icons';
 
 const CustomGrid = ({models, advertisement}) => {
   return (
@@ -31,7 +33,11 @@ const CustomGrid = ({models, advertisement}) => {
   );
 };
 
-const AllModels = ({models, top, medium, last}) => {
+const AllModels = ({models, top, medium, last, filteredModels, isSearch}) => {
+  const steps = 12;
+  const existFilteredData = filteredModels.length;
+  const data = existFilteredData ? filteredModels : models;
+
   return (
     <Container maxW={MAX_WIDHT}>
       <Grid
@@ -39,9 +45,25 @@ const AllModels = ({models, top, medium, last}) => {
         templateColumns="repeat(5, 1fr)"
         gap={4}>
         <GridItem colSpan={{base: 5, lg: 4}}>
-          <CustomGrid models={models.slice(0, 12)} advertisement={top} />
-          <CustomGrid models={models.slice(13, 25)} advertisement={medium} />
-          <CustomGrid models={models.slice(26)} advertisement={last} />
+          {isSearch && (
+            <Alert
+              status={existFilteredData ? 'success' : 'error'}
+              my="4"
+              color={existFilteredData ? 'green' : 'blackAlpha.800'}>
+              <WarningIcon color="inherit" />
+              <Text ml="2" color="inherit">{`${
+                existFilteredData
+                  ? 'Modelos de tu preferencia'
+                  : 'Lo sentimos, no encontramos modelos pero puedes seguir buscando'
+              }`}</Text>
+            </Alert>
+          )}
+          <CustomGrid models={data.slice(0, steps)} advertisement={top} />
+          <CustomGrid
+            models={data.slice(steps + 1, steps * 2 + 1)}
+            advertisement={medium}
+          />
+          <CustomGrid models={data.slice(steps * 2 + 2)} advertisement={last} />
         </GridItem>
         <GridItem colSpan={{base: 0, lg: 1}} bg="tomato" />
       </Grid>

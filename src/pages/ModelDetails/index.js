@@ -40,7 +40,7 @@ const ModelDetails = ({
           gridTemplateRows={{base: '1fr 1fr', md: '1fr'}}>
           <GridItem colSpan={{base: 6, md: 4}} maxWidth="600px" marginX="auto">
             <Grid
-              gridTemplateColumns="repeat(2, 300)"
+              gridTemplateColumns="repeat(2, 1fr)"
               gridTemplateRows="1fr"
               gap={4}>
               {formatedPhotos.map((item, index) => (

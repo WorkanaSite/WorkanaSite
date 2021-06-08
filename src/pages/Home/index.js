@@ -2,11 +2,11 @@ import Navigation from 'src/nav';
 import Top from './sections/Top';
 import AllModels from './sections/AllModels';
 import Filter from './sections/Filter';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 const Home = ({
   zones,
   agencies,
-  models,
+  models = [],
   top: topModels,
   advertisements = {},
 }) => {
@@ -15,6 +15,7 @@ const Home = ({
     zone: '',
     agency: '',
   });
+  const [filteredModels, setFilterModels] = useState([]);
   const {top, medium, last} = advertisements;
   const agenciesOptions = agencies.map(item => ({
     value: item.id,
@@ -25,10 +26,17 @@ const Home = ({
     label: item.name,
   }));
 
+  useEffect(() => {
+    setFilterModels(
+      models.filter(item => item.agencyId == agency || item.zoneId == zone),
+    );
+  }, [zone, agency]);
+
   const onSelectGender = label => setFilter(prev => ({...prev, gender: label}));
   const onSelectZone = id => setFilter(prev => ({...prev, zone: id}));
   const onSelectAgency = id => setFilter(prev => ({...prev, agency: id}));
 
+  const isSearch = gender || zone || agency;
   return (
     <>
       <Top models={topModels} />
@@ -43,7 +51,14 @@ const Home = ({
         zone={zone}
         gender={gender}
       />
-      <AllModels models={models} top={top} medium={medium} last={last} />
+      <AllModels
+        filteredModels={filteredModels}
+        models={models}
+        top={top}
+        medium={medium}
+        last={last}
+        isSearch={isSearch}
+      />
     </>
   );
 };
