@@ -8,7 +8,8 @@ const Models = ({models, ...props}) => {
       alt={item.name}
       objectFit="contain"
       loading="lazy"
-      mx="4"
+      height="100%"
+      mx="4px"
       _first={{
         ml: 0,
       }}
