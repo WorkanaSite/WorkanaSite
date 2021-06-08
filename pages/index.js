@@ -8,6 +8,9 @@ export const getServerSideProps = async ({res}) => {
   return {
     props: {
       ...data,
+      seo: {
+        title: 'Home',
+      },
     },
   };
 };

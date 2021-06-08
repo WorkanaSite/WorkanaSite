@@ -15,25 +15,27 @@ import {RiWhatsappFill, RiHomeHeartFill, RiServiceFill} from 'react-icons/ri';
 import InfoModel from './components/InfoModel';
 
 const ModelDetails = ({
-  name,
-  photos = [],
-  age,
-  agency,
-  zone,
-  description,
-  height,
-  schedule,
-  principalPhotoURL,
-  hairColor,
-  bodyMeasurements,
-  category = [],
-  phone,
+  model: {
+    name,
+    photos = [],
+    age,
+    agency,
+    zone,
+    description,
+    height,
+    schedule,
+    principalPhotoURL,
+    hairColor,
+    bodyMeasurements,
+    category = [],
+    phone,
+  },
 }) => {
   const formatedPhotos = formatPhotos(photos);
   const redirectToWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP_LINK.replace(
     '{number}',
     phone,
-  ).replaceAll(' ', '%20');
+  );
 
   return (
     <div>
@@ -56,7 +58,6 @@ const ModelDetails = ({
                     width="100%"
                     objectFit="contain"
                     loading="lazy"
-                    // width="90"
                   />
                 </GridItem>
               ))}

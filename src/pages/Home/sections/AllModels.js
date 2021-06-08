@@ -79,10 +79,9 @@ const AllModels = ({
           />
           <CustomGrid models={data.slice(steps * 2 + 2)} advertisement={last} />
         </GridItem>
-        <GridItem colSpan={{base: 0, lg: 1}}>
-          {/* {right.map((item, index) => (
-            <Image key={index} src={item.imageURL} width="100%" />
-          ))} */}
+        <GridItem
+          colSpan={{base: 0, lg: 1}}
+          display={{base: 'none', lg: 'block'}}>
           <VerticaAdvertisements data={right} />
         </GridItem>
       </Grid>

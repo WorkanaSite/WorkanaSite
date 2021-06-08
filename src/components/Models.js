@@ -9,7 +9,6 @@ const Models = ({models, ...props}) => {
       position="absolute"
       objectFit="contain"
       loading="lazy"
-      heigthImage="100%"
       gender={item.gender}
       indepent={item.indepent}
       mx="4px"
