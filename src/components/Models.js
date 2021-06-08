@@ -1,8 +1,10 @@
 import {Image} from '@chakra-ui/react';
-
+import {useRouter} from 'next/router';
 const Models = ({models, ...props}) => {
+  const {push} = useRouter();
   return models.map((item, index) => (
     <Image
+      onClick={() => push(`/modelos/${item.id}`)}
       key={index}
       src={item.principalPhotoURL}
       alt={item.name}
