@@ -11,7 +11,8 @@ import {
 import {MAX_WIDHT} from 'src/constants';
 import Navigation from 'src/nav';
 import {formatPhotos} from './lib';
-import TextDetails from 'src/components/TextDetails';
+import {RiWhatsappFill, RiHomeHeartFill, RiServiceFill} from 'react-icons/ri';
+import InfoModel from './components/InfoModel';
 
 const ModelDetails = ({
   name,
@@ -29,6 +30,10 @@ const ModelDetails = ({
   phone,
 }) => {
   const formatedPhotos = formatPhotos(photos);
+  const redirectToWhatsApp = process.env.NEXT_PUBLIC_WHATSAPP_LINK.replace(
+    '{number}',
+    phone,
+  ).replaceAll(' ', '%20');
 
   return (
     <div>
@@ -79,14 +84,33 @@ const ModelDetails = ({
               {description}
             </Text>
             <Box justifyItems="flex-start" width="100%" mt="8">
-              <TextDetails label="Agencia" value={agency.name} />
-              <TextDetails label="Zona" value={zone.name} />
-              <TextDetails label="Altura" value={`${height}cm`} />
-              <TextDetails label="Horario" value={`${schedule}`} />
-              <TextDetails label="Color de cabello" value={`${hairColor}`} />
-              <TextDetails label="Medidas" value={`${bodyMeasurements}`} />
-              <TextDetails label="Intereses" value={`${category.join(', ')}`} />
-              <TextDetails label="Phone" value={`${phone}`} />
+              <InfoModel
+                title="Detalles"
+                value={name}
+                Icon={RiServiceFill}
+                color="blue.700"
+                details={[
+                  `Altura: ${height}cm`,
+                  `Color de cabello: ${hairColor}`,
+                  `Medidas: ${bodyMeasurements}`,
+                  `Interéses: ${category.join(', ')}`,
+                ]}
+              />
+              <InfoModel
+                title="Contactáme"
+                value={phone}
+                color="whatsapp.600"
+                href={redirectToWhatsApp}
+                Icon={RiWhatsappFill}
+                details={[`Horario: ${schedule}`]}
+              />
+              <InfoModel
+                color="pink.700"
+                title="Mi agencia"
+                value={agency.name}
+                Icon={RiHomeHeartFill}
+                details={[`Zona: ${zone.name}`]}
+              />
             </Box>
           </GridItem>
         </Grid>
