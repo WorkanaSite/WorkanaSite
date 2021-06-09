@@ -25,8 +25,10 @@ const InfoModel = ({color, Icon, title, value, details = [], href}) => {
         <ChakraIcon as={Icon} mr="4" />
         {value}
       </StatNumber>
-      {details.map((item, index) => (
-        <StatHelpText key={index}>{item}</StatHelpText>
+      {details.map(({label, ...props}, index) => (
+        <StatHelpText key={index} {...props}>
+          {label}
+        </StatHelpText>
       ))}
     </Stat>
   );

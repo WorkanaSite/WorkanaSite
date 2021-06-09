@@ -24,7 +24,6 @@ const ModelDetails = ({
     description,
     height,
     schedule,
-    principalPhotoURL,
     hairColor,
     bodyMeasurements,
     category = [],
@@ -69,55 +68,57 @@ const ModelDetails = ({
             px="2"
             pb="2"
             pt={{base: '4', lg: '0'}}
+            bg="l_bg"
             flexDirection="column"
             alignItems="center">
-            <Heading textAlign="center">
-              {name} <br /> {`${age} años`}{' '}
-            </Heading>
-            <Image
-              noOfLines={1}
-              src={principalPhotoURL}
-              maxWidth="300px"
-              alt={`Model - ${name}`}
-              align="center"
-              my="4"
-            />
-            <Text textAlign="center" fontSize="lg">
-              {description}
-            </Text>
             <Box
               justifyItems="flex-start"
               width="100%"
               mt="8"
-              position="sticky"
-              top={'72px'}>
-              <InfoModel
-                title="Detalles"
-                value={name}
-                Icon={RiServiceFill}
-                color="blue.700"
-                details={[
-                  `Altura: ${height}cm`,
-                  `Color de cabello: ${hairColor}`,
-                  `Medidas: ${bodyMeasurements}`,
-                  `Interéses: ${category.join(', ')}`,
-                ]}
-              />
+              bg="l_bg"
+              position={{base: 'initial', lg: 'sticky'}}
+              top={'100px'}>
+              <Heading textAlign="center">
+                {name} <br /> {`${age} años`}{' '}
+              </Heading>
               <InfoModel
                 title="Contactáme"
                 value={phone}
                 color="whatsapp.600"
                 href={redirectToWhatsApp}
                 Icon={RiWhatsappFill}
-                details={[`Horario: ${schedule}`]}
+                details={[
+                  {
+                    label: 'Click aquí para llamar',
+                    as: 'a',
+                    href: `tel:${phone}`,
+                    fontWeight: 'bold',
+                  },
+                  {label: `Horario: ${schedule}`},
+                ]}
               />
               <InfoModel
                 color="pink.700"
                 title="Mi agencia"
                 value={agency.name}
                 Icon={RiHomeHeartFill}
-                details={[`Zona: ${zone.name}`]}
+                details={[{label: `Zona: ${zone.name}`}]}
               />
+              <InfoModel
+                title="Detalles"
+                value={name}
+                Icon={RiServiceFill}
+                color="blue.700"
+                details={[
+                  {label: `Altura: ${height}cm`},
+                  {label: `Color de cabello: ${hairColor}`},
+                  {label: `Medidas: ${bodyMeasurements}`},
+                  {label: `Interéses: ${category.join(', ')}`},
+                ]}
+              />
+              <Text textAlign="center" fontSize="lg">
+                {description}
+              </Text>
             </Box>
           </GridItem>
         </Grid>
