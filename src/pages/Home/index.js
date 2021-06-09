@@ -10,7 +10,7 @@ const Home = ({
   agencies,
   models = [],
   top: topModels,
-  advertisements = {},
+  advertisements = [],
 }) => {
   const router = useRouter();
   const {query = {}} = router;
@@ -21,7 +21,12 @@ const Home = ({
     agency: query?.agencia || '',
   });
   const [filteredModels, setFilterModels] = useState([]);
-  const {top = [], medium = [], last = [], right = []} = advertisements;
+  const {
+    top = [],
+    medium = [],
+    last = [],
+    right = [],
+  } = advertisements[gender] || {};
   const agenciesOptions = agencies.map(item => ({
     value: item.id,
     label: item.name,
@@ -49,6 +54,9 @@ const Home = ({
       }`,
       {shallow: true},
     );
+    if (process.browser) {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
   }, [zone, agency, gender]);
 
   const onSelectGender = label => setFilter(prev => ({...prev, gender: label}));
