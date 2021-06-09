@@ -12,12 +12,14 @@ const Models = ({models, ...props}) => {
       gender={item.gender}
       indepent={item.indepent}
       mx="4px"
+      minHeight={100}
       _first={{
         ml: 0,
       }}
       _last={{
         mr: 0,
       }}
+      height="100%"
       {...props}
     />
   ));

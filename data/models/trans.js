@@ -1,12 +1,10 @@
-const IMAGE_V = 'https://dummyimage.com/800x1280.png';
-const IMAGE_V1 = 'https://dummyimage.com/290x400.png';
-const IMAGE_H = 'https://dummyimage.com/600x396.png';
-const IMAGE_H1 = 'https://dummyimage.com/400x300.png';
-export const top = [
+const {IMAGE_V, IMAGE_H, IMAGE_H1, IMAGE_V1} = require('./dummyImages');
+
+export const trans = [
   {
     id: 7590,
-    name: 'Manuel Williamson',
-    gender: 'Hombre',
+    name: 'Ben Quigley',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -22,6 +20,10 @@ export const top = [
     description:
       'Et voluptatem necessitatibus magnam omnis. Ratione quo voluptatem rerum reiciendis enim voluptatibus velit. Voluptas ut ut ullam est.',
     photos: [
+      {
+        id: 'Keara',
+        photoURL: IMAGE_H,
+      },
       {
         id: 'Donna',
         photoURL: IMAGE_V,
@@ -40,10 +42,6 @@ export const top = [
       {
         id: 'Agustin',
         photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Keara',
-        photoURL: IMAGE_H,
       },
       {
         id: 'Jenifer',
@@ -65,8 +63,8 @@ export const top = [
   },
   {
     id: 80764,
-    name: 'Miss Marguerite Armstrong',
-    gender: 'Mujer',
+    name: 'Jenny Bednar',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'copying',
@@ -120,7 +118,7 @@ export const top = [
   },
   {
     id: 2562,
-    name: 'Darin Muller',
+    name: 'Erin Rempel',
     gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
@@ -171,8 +169,8 @@ export const top = [
   },
   {
     id: 5071,
-    name: 'Shannon Sipes',
-    gender: 'Hombre',
+    name: 'Richard Zulauf',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'morph',
@@ -227,8 +225,8 @@ export const top = [
   },
   {
     id: 45029,
-    name: 'Billy Murphy',
-    gender: 'Mujer',
+    name: 'Randy Krajcik',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'alarm',
@@ -266,8 +264,8 @@ export const top = [
   },
   {
     id: 65394,
-    name: 'Beverly Jenkins',
-    gender: 'Mujer',
+    name: 'Leona Luettgen',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'compressing',
@@ -302,8 +300,8 @@ export const top = [
   },
   {
     id: 72505,
-    name: 'Vincent Borer',
-    gender: 'Hombre',
+    name: 'Stuart Macejkovic',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Tools',
@@ -333,8 +331,8 @@ export const top = [
   },
   {
     id: 46551,
-    name: 'Margaret Kohler',
-    gender: 'Mujer',
+    name: 'Gayle Corkery',
+    gender: 'Trans',
     principalPhotoURL: IMAGE_V,
     age: 23,
     hairColor: 'Legacy',
@@ -384,112 +382,6 @@ export const top = [
       },
       {
         id: 'Kasandra',
-        photoURL: IMAGE_V,
-        isVertical: true,
-      },
-    ],
-    indepent: true,
-  },
-  {
-    id: 56385,
-    name: 'Dr. Allan VonRueden',
-    gender: 'Trans',
-    principalPhotoURL: IMAGE_V,
-    age: 23,
-    hairColor: 'copying',
-    height: '167 cm',
-    bodyMeasurements: '90-60-90',
-    agencyId: 102,
-    zoneId: 202,
-    interests: ['Juegos de mesa'],
-    category: ['Hombres', 'Mujeres', 'Trans'],
-    schedule: 'Lunes - Viernes de 9:00 - 11:00',
-
-    phone: '593876543212',
-    description:
-      'Et vel magni expedita repellendus consequatur et. Facilis qui et occaecati aut eum voluptas tempora magnam. Et cum ea libero. Sit consequatur architecto velit repellat non.',
-    photos: [
-      {
-        id: 'Berneice',
-        photoURL: IMAGE_H,
-      },
-      {
-        id: 'Aubree',
-        photoURL: IMAGE_H,
-      },
-      {
-        id: 'Leon',
-        photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Israel',
-        photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Virgil',
-        photoURL: IMAGE_H,
-      },
-      {
-        id: 'Linnea',
-        photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Kris',
-        photoURL: IMAGE_V1,
-        isVertical: true,
-      },
-      {
-        id: 'Erica',
-        photoURL: IMAGE_V,
-        isVertical: true,
-      },
-    ],
-  },
-  {
-    id: 18452,
-    name: 'Lamar Lubowitz',
-    gender: 'Trans',
-    principalPhotoURL: IMAGE_V,
-    age: 23,
-    hairColor: 'matrices',
-    height: '167 cm',
-    bodyMeasurements: '90-60-90',
-    agencyId: 103,
-    zoneId: 203,
-    interests: ['Juegos de mesa'],
-    category: ['Hombres', 'Mujeres', 'Trans'],
-    schedule: 'Lunes - Viernes de 9:00 - 11:00',
-
-    phone: '593876543212',
-    description:
-      'Eius repellat ab. Dolorum officia itaque. Vero aut repellat aut.',
-    photos: [
-      {
-        id: 'Reva',
-        photoURL: IMAGE_H,
-      },
-      {
-        id: 'Frederick',
-        photoURL: IMAGE_H,
-      },
-      {
-        id: 'Jessy',
-        photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Rico',
-        photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Gladyce',
-        photoURL: IMAGE_H,
-      },
-      {
-        id: 'Jimmie',
-        photoURL: IMAGE_H1,
-      },
-      {
-        id: 'Christina',
         photoURL: IMAGE_V,
         isVertical: true,
       },

@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -14,6 +13,8 @@ import {
   useBreakpointValue,
   useDisclosure,
   Image,
+  Grid,
+  GridItem,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -23,25 +24,21 @@ import {
 } from '@chakra-ui/icons';
 import NextLink from 'src/components/NextLink';
 import {COLOR_MENU, NAV_ITEMS} from 'src/constants/nav';
+import CustomTag from './GenderTag';
+import {gendersOptions} from 'src/components/GenderIcons';
 
-const Navigation = () => {
+const Navigation = ({top = 0, handleSelectGender, gender}) => {
   const {isOpen, onToggle} = useDisclosure();
-
   return (
-    <Box position="sticky" top={0} zIndex="modal">
-      <Flex
-        minH={'60px'}
-        py={{base: 2}}
-        px={{base: 4}}
-        borderBottom={1}
-        bg={COLOR_MENU.bg}
-        borderStyle={'solid'}
-        align={'center'}>
-        <Flex
-          flex={{base: 1, md: 'auto'}}
-          ml={{base: -2}}
-          display={{base: 'flex', md: 'none'}}>
+    <Box position="sticky" top={top} zIndex="modal" bg={COLOR_MENU.bg} p="2">
+      <Grid
+        h={{base: '85px', lg: '64px'}}
+        templateRows={{base: 'repeat(2, 1fr)', lg: '1fr'}}
+        templateColumns={{base: '75px 1fr 75px', lg: '.5fr 1fr 1fr'}}
+        gap={1}>
+        <GridItem rowSpan={1} colSpan={1}>
           <IconButton
+            display={{base: 'flex', md: 'none'}}
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
@@ -49,48 +46,69 @@ const Navigation = () => {
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
           />
-        </Flex>
-        <Flex
-          flex={{base: 1}}
-          justify={{base: 'center', md: 'start'}}
-          alignitems="center">
+        </GridItem>
+        <GridItem
+          rowSpan={1}
+          colSpan={1}
+          display="flex"
+          justifyContent="center">
           <NextLink href="/">
             <Image
               align={useBreakpointValue({base: 'center'})}
               src="/logo.png"
               alt="site logo"
-              height={12}
+              height={{base: '44px', lg: '100%'}}
             />
           </NextLink>
-
-          <Flex display={{base: 'none', md: 'flex'}} ml={10}>
+          <Flex
+            display={{base: 'none', md: 'flex'}}
+            justifyContent="center"
+            ml={10}>
             <DesktopNav />
           </Flex>
-        </Flex>
-        <Stack flex={{base: 1, md: 0}} justify={'flex-end'} direction={'row'} />
-        {/* <Stack
-          flex={{base: 1, md: 0}}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          <Button
-            display={{base: 'none', md: 'inline-flex'}}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.600',
-            }}>
-            Publica tu anuncio
-          </Button>
-        </Stack>
-       */}
-      </Flex>
-
+        </GridItem>
+        <GridItem rowSpan={1} colSpan={1}>
+          <Box
+            display={{base: 'none', lg: 'flex'}}
+            h="full"
+            justifyContent="flex-end"
+            alignItems="center">
+            {Object.values(gendersOptions).map(
+              ({label, value, Icon}, index) => (
+                <CustomTag
+                  key={index}
+                  label={label}
+                  value={value}
+                  Icon={Icon}
+                  colorScheme="red"
+                  isSelected={gender === value}
+                  handleSelect={handleSelectGender}
+                />
+              ),
+            )}
+          </Box>
+        </GridItem>
+        <GridItem
+          rowSpan={2}
+          colSpan={3}
+          display={{base: 'flex', lg: 'none'}}
+          justifyContent="center">
+          {Object.values(gendersOptions).map(({label, value, Icon}, index) => (
+            <CustomTag
+              key={index}
+              label={label}
+              value={value}
+              Icon={Icon}
+              colorScheme="red"
+              isSelected={gender === value}
+              handleSelect={handleSelectGender}
+            />
+          ))}
+        </GridItem>
+      </Grid>
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
+        <Stack direction="row" mb="1"></Stack>
       </Collapse>
     </Box>
   );

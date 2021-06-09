@@ -1,5 +1,6 @@
 import {top} from 'data';
 
-export default (req, res) => {
+const getTopModels = (req, res) => {
   res.status(200).json({top});
 };
+export default getTopModels;

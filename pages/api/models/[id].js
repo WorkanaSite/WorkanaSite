@@ -1,5 +1,5 @@
 import {models, zones, agencies} from 'data';
-export default (req, res) => {
+const getModelDetails = (req, res) => {
   const {
     query: {id},
   } = req;
@@ -13,3 +13,5 @@ export default (req, res) => {
     res.status(200).json({...model, zone, agency});
   }
 };
+
+export default getModelDetails;

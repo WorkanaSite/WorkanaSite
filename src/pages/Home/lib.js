@@ -18,4 +18,5 @@ export const filterByGenderZoneAndAgency = ({
   } else {
     return models.filter(item => item.gender == gender && item.zoneId == zone);
   }
+  // refactor para devolver los modelos de ese genero
 };

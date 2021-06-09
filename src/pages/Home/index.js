@@ -14,10 +14,11 @@ const Home = ({
 }) => {
   const router = useRouter();
   const {query = {}} = router;
+
   const [{gender, zone, agency}, setFilter] = useState({
-    gender: query?.gender || 'Mujer',
-    zone: query?.zone || '',
-    agency: query?.agency || '',
+    gender: query?.genero || 'Mujer',
+    zone: query?.zona || '',
+    agency: query?.agencia || '',
   });
   const [filteredModels, setFilterModels] = useState([]);
   const {top = [], medium = [], last = [], right = []} = advertisements;
@@ -58,16 +59,19 @@ const Home = ({
   return (
     <>
       <Top models={topModels} />
-      <Navigation />
+      <Navigation
+        top={150}
+        gender={gender}
+        handleSelectGender={onSelectGender}
+      />
       <Filter
+        top={{base: 251, lg: 221}}
         zoneOptions={zoneOptions}
         agenciesOptions={agenciesOptions}
-        handleSelectGender={onSelectGender}
         handleSelectZone={onSelectZone}
         handleSelectAgency={onSelectAgency}
         agency={agency}
         zone={zone}
-        gender={gender}
       />
       <AllModels
         filteredModels={filteredModels}

@@ -8,6 +8,7 @@ const VerticaAdvertisements = ({data}) => {
       width="100%"
       onClick={() => item.url && window.open(item.url, '_blank')}
       mb="4"
+      loading="lazy"
     />
   ));
 };

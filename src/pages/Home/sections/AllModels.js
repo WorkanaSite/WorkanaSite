@@ -15,10 +15,7 @@ import VerticaAdvertisements from './VerticalAdvertisements';
 const CustomGrid = ({models, advertisement}) => {
   return (
     <>
-      <SimpleGrid
-        position="relative"
-        columns={{base: 2, sm: 3, md: 4, lg: 6}}
-        spacing={4}>
+      <SimpleGrid position="relative" columns={6} spacing={{base: 1, lg: 3}}>
         {models.map(item => (
           <ModelCard
             key={item.id}
@@ -30,7 +27,8 @@ const CustomGrid = ({models, advertisement}) => {
             objectFit="contain"
             loading="lazy"
             width="100%"
-            heigth="100%"
+            heigth="auto"
+            minH="auto"
           />
         ))}
       </SimpleGrid>
@@ -57,8 +55,8 @@ const AllModels = ({
       <Grid
         templateRows="repeat(1, 1fr)"
         templateColumns="repeat(5, 1fr)"
-        gap={4}>
-        <GridItem colSpan={{base: 5, lg: 4}}>
+        gap={{base: 1, lg: 4}}>
+        <GridItem colSpan={{base: 4}}>
           {isSearch && (
             <Alert
               status={existFilteredData ? 'success' : 'error'}
@@ -79,9 +77,7 @@ const AllModels = ({
           />
           <CustomGrid models={data.slice(steps * 2 + 2)} advertisement={last} />
         </GridItem>
-        <GridItem
-          colSpan={{base: 0, lg: 1}}
-          display={{base: 'none', lg: 'block'}}>
+        <GridItem colSpan={{base: 1}}>
           <VerticaAdvertisements data={right} />
         </GridItem>
       </Grid>
