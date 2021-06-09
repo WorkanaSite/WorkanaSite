@@ -110,7 +110,7 @@ const ModelDetails = ({
                 Icon={RiServiceFill}
                 color="blue.700"
                 details={[
-                  {label: `Altura: ${height}cm`},
+                  {label: `Altura: ${height}`},
                   {label: `Color de cabello: ${hairColor}`},
                   {label: `Medidas: ${bodyMeasurements}`},
                   {label: `Interéses: ${category.join(', ')}`},
