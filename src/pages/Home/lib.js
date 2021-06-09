@@ -18,5 +18,35 @@ export const filterByGenderZoneAndAgency = ({
   } else {
     return models.filter(item => item.gender == gender && item.zoneId == zone);
   }
-  // refactor para devolver los modelos de ese genero
+};
+
+export const formatModels = ({data, steps, advertisements = {}}) => {
+  const _data = [];
+  let aux = 1;
+
+  for (let index = 0; index < data.length + steps; index += steps) {
+    const advertisement = advertisements[aux] || [];
+    const windowSteps = steps * aux;
+    const modelsFormat = data.slice(index, windowSteps);
+
+    if (modelsFormat.length) {
+      _data.push({models: modelsFormat, advertisement});
+    }
+    aux++;
+  }
+  return _data;
+};
+
+const getAdvertisement = index => {
+  switch (index) {
+    case 1:
+      break;
+    case 2:
+      break;
+    case 3:
+      break;
+
+    default:
+      break;
+  }
 };

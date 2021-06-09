@@ -74,6 +74,7 @@ const Home = ({
         zone={zone}
       />
       <AllModels
+        gender={gender}
         filteredModels={filteredModels}
         models={models}
         top={top}

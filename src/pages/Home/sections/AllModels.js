@@ -11,11 +11,16 @@ import {MAX_WIDHT} from 'src/constants';
 import {WarningIcon} from '@chakra-ui/icons';
 import ModelCard from 'src/components/ModelCard';
 import VerticaAdvertisements from './VerticalAdvertisements';
+import {formatModels} from '../lib';
 
 const CustomGrid = ({models, advertisement}) => {
   return (
     <>
-      <SimpleGrid position="relative" columns={6} spacing={{base: 1, lg: 3}}>
+      <SimpleGrid
+        position="relative"
+        columns={6}
+        spacing={{base: 1, lg: 3}}
+        mb="2">
         {models.map(item => (
           <ModelCard
             key={item.id}
@@ -38,17 +43,30 @@ const CustomGrid = ({models, advertisement}) => {
 };
 
 const AllModels = ({
-  models,
+  models = [],
   top,
   medium,
   last,
   filteredModels,
   isSearch,
   right,
+  gender,
 }) => {
   const steps = 12;
   const existFilteredData = filteredModels.length;
-  const data = existFilteredData ? filteredModels : models;
+  const data = existFilteredData
+    ? filteredModels
+    : models.filter(item => item.gender === gender);
+
+  const _formatModels = formatModels({
+    data,
+    steps,
+    advertisements: {
+      1: top,
+      2: medium,
+      3: last,
+    },
+  });
 
   return (
     <Container maxW={MAX_WIDHT}>
@@ -70,12 +88,9 @@ const AllModels = ({
               }`}</Text>
             </Alert>
           )}
-          <CustomGrid models={data.slice(0, steps)} advertisement={top} />
-          <CustomGrid
-            models={data.slice(steps + 1, steps * 2 + 1)}
-            advertisement={medium}
-          />
-          <CustomGrid models={data.slice(steps * 2 + 2)} advertisement={last} />
+          {_formatModels.map(({models, advertisement}) => (
+            <CustomGrid models={models} advertisement={advertisement} />
+          ))}
         </GridItem>
         <GridItem colSpan={{base: 1}}>
           <VerticaAdvertisements data={right} />
@@ -84,4 +99,5 @@ const AllModels = ({
     </Container>
   );
 };
+
 export default AllModels;
