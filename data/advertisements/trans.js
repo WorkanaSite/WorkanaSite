@@ -1,4 +1,4 @@
-export const advertisements = {
+export const trans = {
   top: [
     {
       id: 15320,

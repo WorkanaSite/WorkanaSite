@@ -56,9 +56,10 @@ const Home = ({
   const onSelectAgency = id => setFilter(prev => ({...prev, agency: id}));
 
   const isSearch = zone || agency;
+
   return (
     <>
-      <Top models={topModels} />
+      <Top models={topModels[gender]} />
       <Navigation
         top={150}
         gender={gender}
