@@ -88,8 +88,12 @@ const AllModels = ({
               }`}</Text>
             </Alert>
           )}
-          {_formatModels.map(({models, advertisement}) => (
-            <CustomGrid models={models} advertisement={advertisement} />
+          {_formatModels.map(({models, advertisement}, index) => (
+            <CustomGrid
+              key={index}
+              models={models}
+              advertisement={advertisement}
+            />
           ))}
         </GridItem>
         <GridItem colSpan={{base: 1}}>

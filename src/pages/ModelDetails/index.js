@@ -28,6 +28,7 @@ const ModelDetails = ({
     bodyMeasurements,
     category = [],
     phone,
+    gender,
   },
 }) => {
   const formatedPhotos = formatPhotos(photos);
@@ -78,7 +79,7 @@ const ModelDetails = ({
               bg="l_bg"
               position={{base: 'initial', lg: 'sticky'}}
               top={'100px'}>
-              <Heading textAlign="center">
+              <Heading textAlign="center" mb="4">
                 {name} <br /> {`${age} años`}{' '}
               </Heading>
               <InfoModel
@@ -110,13 +111,14 @@ const ModelDetails = ({
                 Icon={RiServiceFill}
                 color="blue.700"
                 details={[
+                  {label: `Género: ${gender}`},
                   {label: `Altura: ${height}`},
                   {label: `Color de cabello: ${hairColor}`},
                   {label: `Medidas: ${bodyMeasurements}`},
                   {label: `Interéses: ${category.join(', ')}`},
                 ]}
               />
-              <Text textAlign="center" fontSize="lg">
+              <Text textAlign="center" fontSize="lg" mt="4">
                 {description}
               </Text>
             </Box>
