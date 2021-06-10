@@ -41,23 +41,22 @@ export const men = {
   ],
   right: [
     {
-      disable: true,
       id: 44504,
-      url: '/?genero=Trans&zona=203&agencia=102',
+      url: '/?genero=Mujer&zona=203&agencia=102',
       imageURL:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6YMXbxu4waIL-__bAjaUJndqgAHfb_Osl4Khg0DKNx7t49W5tLe2N5_pMI02jiVMqQB7g4NcD9oXNTQ&usqp=CAU',
+      isURLToSite: true,
     },
     {
+      disabled: true,
       id: 11005,
       imageURL:
         'https://i.pinimg.com/236x/f2/97/1c/f2971cd2eaaa915ab89b137b10bb597b.jpg',
-      isOpenInNewTab: true,
     },
     {
       id: 11005,
       imageURL:
         'https://www.proyectosparaconstruir.com/wp-content/uploads/2017/04/300x600.jpg',
-      isOpenInNewTab: true,
     },
   ],
 };

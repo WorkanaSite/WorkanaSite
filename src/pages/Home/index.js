@@ -3,7 +3,7 @@ import Top from './sections/Top';
 import AllModels from './sections/AllModels';
 import Filter from './sections/Filter';
 import {useEffect, useState} from 'react';
-import {filterByGenderZoneAndAgency} from './lib';
+import {filterByGenderZoneAndAgency, isSameRouteParams} from './lib';
 import {useRouter} from 'next/router';
 import {Box} from '@chakra-ui/react';
 const Home = ({
@@ -15,12 +15,12 @@ const Home = ({
 }) => {
   const router = useRouter();
   const {query = {}} = router;
-
   const [{gender, zone, agency}, setFilter] = useState({
     gender: query?.genero || 'Mujer',
     zone: query?.zona || '',
     agency: query?.agencia || '',
   });
+
   const [filteredModels, setFilterModels] = useState([]);
   const {
     top = [],
@@ -38,9 +38,20 @@ const Home = ({
   }));
 
   useEffect(() => {
+    if (!isSameRouteParams({query, state: {gender, zone, agency}})) {
+      setFilter({
+        gender: query?.genero || 'Mujer',
+        zone: query?.zona || '',
+        agency: query?.agencia || '',
+      });
+    }
+  }, [query]);
+
+  useEffect(() => {
     setFilterModels(
       filterByGenderZoneAndAgency({zone, gender, agency, models}),
     );
+
     router.push(
       {
         path: '/',
@@ -58,17 +69,17 @@ const Home = ({
     if (process.browser) {
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
-  }, [zone, agency, gender]);
+  }, [gender, zone, agency]);
 
   const onSelectGender = label =>
-    setFilter(prev => ({zone: '', agency: '', gender: label}));
+    setFilter({zone: '', agency: '', gender: label});
   const onSelectZone = id => setFilter(prev => ({...prev, zone: id}));
   const onSelectAgency = id => setFilter(prev => ({...prev, agency: id}));
 
   const isSearch = zone || agency;
 
   return (
-    <Box bg="black">
+    <>
       <Top models={topModels[gender]} />
       <Navigation
         top={150}
@@ -76,7 +87,6 @@ const Home = ({
         handleSelectGender={onSelectGender}
       />
       <Filter
-        top={{base: 251, lg: 221}}
         zoneOptions={zoneOptions}
         agenciesOptions={agenciesOptions}
         handleSelectZone={onSelectZone}
@@ -94,7 +104,7 @@ const Home = ({
         right={right}
         isSearch={isSearch}
       />
-    </Box>
+    </>
   );
 };
 

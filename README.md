@@ -57,11 +57,11 @@ Utiliza las siguientes tecnologías y librerías para el front-end y backend:
    ```
    npm run dev
    ```
-10.
-11. Abrimos nuestro navegador prefereido (recomendación abrir Chrome) y vamos a la siguiente dirección [http://localhost:3000](http://localhost:3000)
+10. Abrimos nuestro navegador prefereido (recomendación abrir Chrome) y vamos a la siguiente dirección [http://localhost:3000](http://localhost:3000)
 
 ## Detalle de directorios
 
+- `analitics`: funciones para el funcionamiento de Google Analytics
 - `data`: pseudo base de datos que contiene la informacion del sitio como son: modelos, anuncios, top de modelos, agencias y zonas
 - `pages`: contiene el enrutamiento de la aplicacion
 - `public` : contiene los recursos publicos de la aplicación
@@ -100,6 +100,8 @@ El API cuenta con los siguientes modelos:
 ```
 
 ### Tipo Modelo (model)
+
+Existen 3 tipos de modelos `women` o Mujer, `men` o Hombre y `trans` o Trans
 
 ```js
 {
@@ -149,11 +151,27 @@ El API cuenta con los siguientes modelos:
 
 ## Tipo Publicidad (advertisement)
 
+Para la url de la publicidad puede ser un sitio externo o una pagina del sitio. Para lo cual cuando es una pagina del sitio siempre debe enviar el parametro `isURLToSite` en `true`.
+Los enlaces pueden ser de la siguiente forma:
+
+- Externos: `https://paginademipublicidad.com`
+- Dentro del sitio:
+  - Filtro en el home puede realizar las siguientes url variando los parametros de genero, zona y agencia (asegurece que estos valores coincidan con los datos en los .json en `/data` ):
+    ```
+    /?genero=Mujer
+    /?genero=Mujer&zona=203
+    /?genero=Mujer&agencia=102
+    /?genero=Mujer&zona=203&agencia=102
+    ```
+  - Enlace a un modelo: `/modelos/18364`
+
 ```js
  {
       id: number | 15320,
       url: string | 'https://paginademipublicidad.com', // --> opcional si no la requiere no la agregue
       imageURL: string | 'https://dummyimage.com/640x100.png',
+      isURLToSite: true, // --> parametro para cuando la url tiene que llevar a alguna pagina del sitio
+      disabled: true,
 },
 ```
 

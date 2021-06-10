@@ -9,8 +9,8 @@ const Top = ({models = []}) => {
       as="div"
       // position="sticky"
       // top={0}
-      justifyContent={'center'}
-      height={{base: 80, lg: 150}} // cambiar el
+      justifyContent={{base: 'flex-start', xl: 'center'}}
+      height={{base: 90, sm: 170, md: 200, lg: 240}}
       style={{
         display: 'flex',
         overflow: 'scroll',

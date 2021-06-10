@@ -36,9 +36,10 @@ export const trans = {
   right: [
     {
       id: 44504,
-      url: 'https://google.com',
+      url: '/modelos/18364',
       imageURL:
         'https://i.pinimg.com/originals/b2/f3/ee/b2f3ee9f924f80a088c9435045d765bc.gif',
+      isURLToSite: true,
     },
     {
       id: 11005,
@@ -47,6 +48,7 @@ export const trans = {
     },
     {
       id: 11005,
+      disabled: true,
       imageURL:
         'https://www.proyectosparaconstruir.com/wp-content/uploads/2017/04/300x600.jpg',
     },

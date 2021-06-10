@@ -42,9 +42,10 @@ export const women = {
   right: [
     {
       id: 44504,
-      url: 'https://google.com',
+      url: '/modelos/16749',
       imageURL:
         'https://i.pinimg.com/originals/a7/94/b7/a794b7440279eb415b85642465f03f2d.jpg',
+      isURLToSite: true,
     },
     {
       id: 11005,

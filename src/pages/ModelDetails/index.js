@@ -68,14 +68,12 @@ const ModelDetails = ({
             px="2"
             pb="2"
             pt={{base: '4', lg: '0'}}
-            bg="l_bg"
             flexDirection="column"
             alignItems="center">
             <Box
               justifyItems="flex-start"
               width="100%"
               mt="8"
-              bg="l_bg"
               position={{base: 'initial', lg: 'sticky'}}
               top={'100px'}>
               <Heading textAlign="center" mb="4">

@@ -37,16 +37,7 @@ export const formatModels = ({data, steps, advertisements = {}}) => {
   return _data;
 };
 
-const getAdvertisement = index => {
-  switch (index) {
-    case 1:
-      break;
-    case 2:
-      break;
-    case 3:
-      break;
-
-    default:
-      break;
-  }
-};
+export const isSameRouteParams = ({query, state}) =>
+  state.gender === query.genero &&
+  state.zone === query.zona &&
+  state.agency === query.agencia;
