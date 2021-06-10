@@ -8,7 +8,10 @@ const Filter = ({
   zone,
   agency,
 }) => (
-  <Flex flex={1} justifyContent={{base: 'flex-end', sm: 'center'}} mb={2}>
+  <Flex
+    flex={1}
+    justifyContent={{base: 'flex-end', sm: 'center'}}
+    mb={{base: '2', md: '6'}}>
     <div>
       <Text as="sub" ml="2">
         Zona

@@ -1,6 +1,9 @@
 import {Box, Image} from '@chakra-ui/react';
+import {useRouter} from 'next/router';
 
 const Top = ({models = []}) => {
+  const {push} = useRouter();
+
   return (
     <Box
       bg="l_bg"
@@ -17,6 +20,7 @@ const Top = ({models = []}) => {
       {models.slice(0, 8).map((item, index) => (
         <Image
           id={item.id}
+          onClick={() => push(`/modelos/${item.id}`)}
           key={index}
           src={item.principalPhotoURL}
           alt={item.name}
