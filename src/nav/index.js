@@ -34,7 +34,7 @@ const Navigation = ({top = 0, handleSelectGender, gender}) => {
       <Grid
         h={{base: '85px', lg: '64px'}}
         templateRows={{base: 'repeat(2, 1fr)', lg: '1fr'}}
-        templateColumns={{base: '75px 1fr 75px', lg: '.5fr 1fr 1fr'}}
+        templateColumns={{base: '75px 1fr 75px', lg: '.7fr 1fr .7fr'}}
         gap={1}>
         <GridItem rowSpan={1} colSpan={1}>
           <IconButton
