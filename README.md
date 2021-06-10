@@ -20,6 +20,7 @@
   - [Detalle de las API](#detalle-de-las-api)
     - [Obtener datos para la pagina principal](#obtener-datos-para-la-pagina-principal)
     - [Obtener datos de un modelo por id](#obtener-datos-de-un-modelo-por-id)
+- [Cambio de variables en Vercel](#cambio-de-variables-en-vercel)
 
 # Introducción
 
@@ -57,7 +58,7 @@ Utiliza las siguientes tecnologías y librerías para el front-end y backend:
    ```
    npm run dev
    ```
-10. Abrimos nuestro navegador prefereido (recomendación abrir Chrome) y vamos a la siguiente dirección [http://localhost:3000](http://localhost:3000)
+   **10**. Abrimos nuestro navegador prefereido (recomendación abrir Chrome) y vamos a la siguiente dirección [http://localhost:3000](http://localhost:3000)
 
 ## Detalle de directorios
 
@@ -260,3 +261,17 @@ El endpoint anterior se encuentra en `/pages/api/models/[id].js` y retornara la 
     },
  },
 ```
+
+# Cambio de variables en Vercel
+
+Si requiere cambiar el nombre del sitio, descricion o imagenes para el SEO debe seguir los siguientes pasos:
+
+1. Dirijase a las configuraciones del proyecto en vercel [https://vercel.com/workanasite/workana-site/settings/environment-variables](https://vercel.com/workanasite/workana-site/settings/environment-variables)
+2. Cambiel el valor que necesite como lo muesta la imagen
+
+   ![settings](./public/settings.png)
+
+3. Regrese al apartado del Deployments o puede ingresar desde aqui [https://vercel.com/workanasite/workana-site/deployments](https://vercel.com/workanasite/workana-site/deployments)
+4. Por ultimo, vuelva a deployar el sitio para que los cambios de las variables tomen efecto. Siempre debe ejecutar este paso en el elemento que contiene _Production (Current)_ como lo muesta en la imagen.
+
+   ![settings](./public/redeploy.png)
