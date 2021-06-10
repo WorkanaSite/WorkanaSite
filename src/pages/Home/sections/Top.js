@@ -1,5 +1,4 @@
-import {Box} from '@chakra-ui/react';
-import Models from 'src/components/Models';
+import {Box, Image} from '@chakra-ui/react';
 
 const Top = ({models = []}) => {
   return (
@@ -9,13 +8,31 @@ const Top = ({models = []}) => {
       as="div"
       // position="sticky"
       // top={0}
-      justifyContent={{base: 'flex-start', xl: 'center'}}
-      height={{base: 90, sm: 170, md: 200, lg: 240}}
+      justifyContent="center"
+      height={{base: '65px', sm: 120, md: 120, lg: 200, xl: 240}}
       style={{
         display: 'flex',
         overflow: 'scroll',
       }}>
-      <Models models={models} />
+      {models.slice(0, 8).map((item, index) => (
+        <Image
+          id={item.id}
+          key={index}
+          src={item.principalPhotoURL}
+          alt={item.name}
+          objectFit="contain"
+          loading="lazy"
+          gender={item.gender}
+          mx="1px"
+          height="100%"
+          _first={{
+            ml: 0,
+          }}
+          _last={{
+            mr: 0,
+          }}
+        />
+      ))}
     </Box>
   );
 };
