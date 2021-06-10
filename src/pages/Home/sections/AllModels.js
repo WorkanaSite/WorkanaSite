@@ -37,7 +37,7 @@ const CustomGrid = ({models, advertisement}) => {
           />
         ))}
       </SimpleGrid>
-      <Advertisements data={advertisement} />
+      {/* <Advertisements data={advertisement} /> */}
     </>
   );
 };

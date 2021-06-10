@@ -1,6 +1,6 @@
 import ModelCard from './ModelCard';
 const Models = ({models, ...props}) => {
-  return models.map((item, index) => (
+  return models.slice(0, 8).map((item, index) => (
     <ModelCard
       id={item.id}
       key={index}

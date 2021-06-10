@@ -2,7 +2,7 @@ export const men = {
   top: [
     {
       id: 15320,
-      url: 'https://google.com',
+      url: '/?genero=Trans&zona=203&agencia=102',
       imageURL:
         'data:image/webp;base64,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',
     },
@@ -41,8 +41,9 @@ export const men = {
   ],
   right: [
     {
+      disable: true,
       id: 44504,
-      url: 'https://google.com',
+      url: '/?genero=Trans&zona=203&agencia=102',
       imageURL:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6YMXbxu4waIL-__bAjaUJndqgAHfb_Osl4Khg0DKNx7t49W5tLe2N5_pMI02jiVMqQB7g4NcD9oXNTQ&usqp=CAU',
     },
@@ -50,11 +51,13 @@ export const men = {
       id: 11005,
       imageURL:
         'https://i.pinimg.com/236x/f2/97/1c/f2971cd2eaaa915ab89b137b10bb597b.jpg',
+      isOpenInNewTab: true,
     },
     {
       id: 11005,
       imageURL:
         'https://www.proyectosparaconstruir.com/wp-content/uploads/2017/04/300x600.jpg',
+      isOpenInNewTab: true,
     },
   ],
 };

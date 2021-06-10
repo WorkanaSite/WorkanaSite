@@ -12,5 +12,5 @@ export const colors = {
   js_secondary: 'rgb(50, 51, 48)',
   l_text: 'black',
   l_button_text: '#fff',
-  l_bg: 'white',
+  l_bg: 'rgba(229, 62, 62, 0.6);',
 };

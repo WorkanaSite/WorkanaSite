@@ -5,6 +5,7 @@ import Filter from './sections/Filter';
 import {useEffect, useState} from 'react';
 import {filterByGenderZoneAndAgency} from './lib';
 import {useRouter} from 'next/router';
+import {Box} from '@chakra-ui/react';
 const Home = ({
   zones,
   agencies,
@@ -59,14 +60,15 @@ const Home = ({
     }
   }, [zone, agency, gender]);
 
-  const onSelectGender = label => setFilter(prev => ({...prev, gender: label}));
+  const onSelectGender = label =>
+    setFilter(prev => ({zone: '', agency: '', gender: label}));
   const onSelectZone = id => setFilter(prev => ({...prev, zone: id}));
   const onSelectAgency = id => setFilter(prev => ({...prev, agency: id}));
 
   const isSearch = zone || agency;
 
   return (
-    <>
+    <Box bg="black">
       <Top models={topModels[gender]} />
       <Navigation
         top={150}
@@ -92,7 +94,7 @@ const Home = ({
         right={right}
         isSearch={isSearch}
       />
-    </>
+    </Box>
   );
 };
 

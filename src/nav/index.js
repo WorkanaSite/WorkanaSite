@@ -30,7 +30,12 @@ import {gendersOptions} from 'src/components/GenderIcons';
 const Navigation = ({top = 0, handleSelectGender, gender}) => {
   const {isOpen, onToggle} = useDisclosure();
   return (
-    <Box position="sticky" top={top} zIndex="modal" bg={COLOR_MENU.bg} p="2">
+    <Box
+      // position="sticky"
+      //  top={top}
+      zIndex="modal"
+      bg={COLOR_MENU.bg}
+      p="2">
       <Grid
         h={{base: '85px', lg: '64px'}}
         templateRows={{base: 'repeat(2, 1fr)', lg: '1fr'}}

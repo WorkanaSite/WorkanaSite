@@ -7,16 +7,13 @@ const Top = ({models = []}) => {
       bg="l_bg"
       zIndex="modal"
       as="div"
-      position="sticky"
-      top={0}
-      justifyContent={{
-        base: 'flex-start',
-        lg: models.length > 16 ? 'flex-start' : 'center',
-      }}
+      // position="sticky"
+      // top={0}
+      justifyContent={'center'}
+      height={{base: 80, lg: 150}} // cambiar el
       style={{
         display: 'flex',
         overflow: 'scroll',
-        height: 150,
       }}>
       <Models models={models} />
     </Box>

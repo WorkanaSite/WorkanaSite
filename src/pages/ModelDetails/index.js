@@ -41,7 +41,6 @@ const ModelDetails = ({
     <div>
       <Navigation />
       <Container maxW={MAX_WIDHT} py="4">
-        <Heading mb="4">{`Modelo`}</Heading>
         <Grid
           gridTemplateColumns="repeat(6, 1fr)"
           gridTemplateRows={{md: '1fr'}}>

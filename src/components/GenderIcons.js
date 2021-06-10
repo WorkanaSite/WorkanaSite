@@ -8,18 +8,19 @@ const defaultGender = {
   value: 'No definido',
 };
 export const gendersOptions = {
-  Hombre: {
-    Icon: AiOutlineMan,
-    color: 'blue.300',
-    label: 'Hombres',
-    value: 'Hombre',
-  },
   Mujer: {
     Icon: AiOutlineWoman,
     color: 'red.300',
     label: 'Mujeres',
     value: 'Mujer',
   },
+  Hombre: {
+    Icon: AiOutlineMan,
+    color: 'blue.300',
+    label: 'Hombres',
+    value: 'Hombre',
+  },
+
   Trans: {
     Icon: FaTransgender,
     color: 'purple.300',

@@ -15,11 +15,9 @@ const Filter = ({
   <Flex
     zIndex="banner"
     flexWrap="wrap"
-    position="sticky"
-    top={top}
     justifyContent="flex-end"
     alignItems="center"
-    bg="white"
+    bg="transparent"
     maxW={MAX_WIDHT}
     as={Container}
     py="2">
@@ -27,23 +25,21 @@ const Filter = ({
       <Stack
         direction="row"
         mb="2"
-        flexWrap="wrap"
-        justifyContent="flex-end"
-        alignItems="center">
+        // centrado cuando este en grande
+        justifyContent={{base: 'flex-end', lg: 'center'}}>
         <div>
           <Text as="sub" ml="2">
             Zona
           </Text>
           <Select
             placeholder="Selecciona una zona"
-            width="64"
-            height="8"
+            width={{base: '32', lg: '64'}} // arreglar aqui
+            height={{base: '4', lg: '8'}}
             mx="2"
             variant="outline"
             value={zone}
             onChange={({target}) => handleSelectZone(target.value)}
-            borderColor="tomato"
-            color="tomato">
+            bgColor="white">
             {zoneOptions.map(item => (
               <option key={item.value} value={item.value}>
                 {item.label}
@@ -57,13 +53,12 @@ const Filter = ({
           </Text>
           <Select
             placeholder="Selecciona una agencia"
-            width="64"
-            height="8"
+            width={{base: '32', lg: '64'}} // arreglar aqui
+            height={{base: '4', lg: '8'}}
             mx="2"
             value={agency}
             onChange={({target}) => handleSelectAgency(target.value)}
-            borderColor="blue.400"
-            color="blue.400">
+            bgColor="white">
             {agenciesOptions.map(item => (
               <option key={item.value} value={item.value}>
                 {item.label}
